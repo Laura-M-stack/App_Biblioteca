@@ -1,0 +1,47 @@
+[
+    {
+        "id_socio": 1,
+        "nombre": "Carlos",
+        "apellido": "Lopez",
+        "fecha_nacimiento": "1980-03-25",
+        "direccion": "Calle 9 de Julio 456",
+        "correo_electronico": "carlos.lopez@example.com",
+        "telefono": "456-7890"
+    },
+    {
+        "id_socio": 2,
+        "nombre": "Ana",
+        "apellido": "Martinez",
+        "fecha_nacimiento": "1990-11-15",
+        "direccion": "Avenida Corrientes 1234",
+        "correo_electronico": "ana.martinez@example.com",
+        "telefono": "123-9876"
+    },
+    {
+        "id_socio": 3,
+        "nombre": "Nina",
+        "apellido": "Sanchez",
+        "fecha_nacimiento": "2005-10-20",
+        "direccion": "Avenida Argentina 123",
+        "correo_electronico": "nina.sanchez@example.com",
+        "telefono": "923-6204"
+    },
+    {
+        "id_socio": 4,
+        "nombre": "Gachi",
+        "apellido": "Bolivar",
+        "fecha_nacimiento": "1998-12-18",
+        "direccion": "Calle 8 1234",
+        "correo_electronico": "gachi.bolivar@example.com",
+        "telefono": "765-0263"
+    },
+    {
+        "id_socio": 5,
+        "nombre": "Pachi",
+        "apellido": "Fernandez",
+        "fecha_nacimiento": "1994-11-8",
+        "direccion": "Avenida Belgrano 1234",
+        "correo_electronico": "pachi.fernandez@example.com",
+        "telefono": "875-2068"
+    }
+]

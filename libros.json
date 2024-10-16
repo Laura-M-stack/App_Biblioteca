@@ -1,0 +1,39 @@
+[
+    {
+        "id_libro": 1,
+        "titulo": "La Metamorfosis",
+        "autor": "Franz Kafka",
+        "editorial": "Austral",
+        "anio_publicacion": 1915,
+        "genero": "Novela",
+        "cantidad_disponible": 3
+    },
+    {
+        "id_libro": 2,
+        "titulo": "El Viejo y el Mar",
+        "autor": "Ernest Hemingway",
+        "editorial": "Panamericana",
+        "anio_publicacion": 1952,
+        "genero": "Novela",
+        "cantidad_disponible": 2
+    },
+    {
+        "id_libro": 3,
+        "titulo": "El Aleph",
+        "autor": "Jorge Luis Borges",
+        "editorial": "Losada",
+        "anio_publicacion": 1945,
+        "genero": "Cuento",
+        "cantidad_disponible": 5
+    },
+    {
+        "id_libro": 4,
+        "titulo": "Rayuela",
+        "autor": "Julio Cortazar",
+        "editorial": "Sudamericana",
+        "anio_publicacion": 1963,
+        "genero": "Novela",
+        "cantidad_disponible": 4
+    }
+ 
+]

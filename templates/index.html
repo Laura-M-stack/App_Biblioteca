@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="scripts" href="{{ url_for('static', filename='scripts.css') }}">
+    <title>Biblioteca Virtual UNER</title>
+</head>
+<body>
+    <header>
+        <div class ="content-header">
+            <img src="static/img/libros.png" alt="logo libros">
+            <h1>Biblioteca Virtual UNER</h1>
+        </div>
+    </header>
+    <main>
+    <h2>Listado de Libros</h2>
+    <ul>
+        {% for libro in libros %}
+            <li>{{ libro["titulo"] }} - {{ libro["autor"] }} - {{ libro["editorial"] }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="post">
+        <label for="id_libro">ID del libro:</label>
+        <input type="text" id="id_libro" name="id_libro"><br><br>
+        <label for="nuevo_titulo">Nuevo título:</label>
+        <input type="text" id="nuevo_titulo" name="nuevo_titulo"><br><br>
+        <label for="nuevo_autor">Nuevo autor:</label>
+        <input type="text" id="nuevo_autor" name="nuevo_autor"><br><br>
+        <label for="nueva_editorial">Nueva editorial:</label>
+        <input type="text" id="nueva_editorial" name="nueva_editorial"><br><br>
+        <button>Editar libro</button>
+    </form>
+
+    <h2>Listado de Socios</h2>
+    <ul>
+        {% for socio in socios %}
+            <li>{{ socio["nombre"] }} {{ socio["apellido"] }} - {{ socio["correo_electronico"] }} - {{ socio["telefono"] }}</li>
+        {% endfor %}
+    </ul>
+    <!--Agregar Socios-->
+    <form action="" method="post">
+        <label for="nombre_socio">Nombre:</label>
+        <input type="text" id="nombre_socio" name="nombre_socio"><br><br>
+        <label for="apellido_socio">Apellido:</label>
+        <input type="text" id="apellido_socio" name="apellido_socio"><br><br>
+        <label for="correo_electronico_socio">Correo electrónico:</label>
+        <input type="email" id="correo_electronico_socio" name="correo_electronico_socio"><br><br>
+        <label for="telefono_socio">Teléfono:</label>
+        <input type="tel" id="telefono_socio" name="telefono_socio"><br><br>
+        <button>Agregar socio</button>
+    </form>
+
+    <h2>Listado de Préstamos</h2>
+    <ul>
+        {% for prestamo in prestamos %}
+            <li>Préstamo {{ prestamo["id_prestamo"] }} - Libro: {{ prestamo["id_libro"] }} - Socio: {{ prestamo["id_socio"] }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Registrar préstamos -->
+    <form action="" method="post">
+            <!-- aquí se mostrarían los libros disponibles para préstamo -->
+            <select id="id_libro" name="id_libro">
+                {% for libro in libros %}
+                    <option value="{{ libro.id }}">{{ libro.titulo }}</option>
+                {% endfor %}
+            </select>
+        </select><br><br>
+            <!-- aquí se mostrarían los socios disponibles -->
+            <select id="id_socio" name="id_socio">
+                {% for socio in socios %}
+                    <option value="{{ socio.id }}">{{ socio.nombre }} {{ socio.apellido }}</option>
+                {% endfor %}
+            </select>
+        </select><br><br>
+        <label for="fecha_prestamo">Fecha de préstamo:</label>
+        <input type="date" id="fecha_prestamo" name="fecha_prestamo"><br><br>
+        <label for="fecha_devolucion">Fecha de devolución:</label>
+        <input type="date" id="fecha_devolucion" name="fecha_devolucion"><br><br>
+        <button>Prestar libro</button>
+    </form>
+</main>
+    <footer>
+        
+        Copyright 2024 - Todos los derechos reservados - Desarrollado por Laura Moyano <br> para la materia Programación I de la Tecnicatura Universitaria en Desarrollo de Software - UNER
+      
+    </footer>
+</body>
+
+</html>
